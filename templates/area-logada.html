@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename= 'img/logo1.jpg') }}">
+    <link rel="icon" href="{{ url_for('static', filename= 'img/logo_edit.png') }}">
+    <title>Café Digital</title>
+</head>
+<body>
+
+<!--Cabeçalho-->
+
+<header>
+    <div class="pesquisa">
+        <input type="search" placeholder="Buscar">
+        <a href="#">
+            <img src="{{ url_for('static', filename='img/procurar.png') }}">
+        </a>
+    </div>
+
+    <div class="logo">
+        <img src="{{ url_for('static', filename='img/logo-edit.png') }}" alt="Logo">
+    </div>
+
+    <div class="carrinho">
+        <a href="#">
+            <img src="{{ url_for('static', filename='img/carrinho-de-compras.png') }}">
+        </a>
+        
+        <div class="usuario">
+            <a href="#">
+                <img src="{{ url_for('static', filename='img/retrato.png') }}">
+            </a>
+        </div>
+        
+    </div>
+</header>
+
+
+<!--Banner e botão "Sobre Nós/Produtos"-->
+
+<div class="banner">
+    <div class="banner_buttons">
+        <a href="#" class="produtos">
+            <span>PRODUTOS</span>
+        </a>
+    
+        <a href="#" class="sobre_nos">
+            <span>SOBRE NÓS</span>
+        </a>
+    </div>
+</div>
+
+<!--Tela de vendas dos produtos-->
+
+<div class="produto">
+    <div class="produtos"520,>
+        <img src="{{ url_for('static', filename='img/pacote-cafe.png') }}" alt="Café em grãos 1kg">
+        <h3>Café em Grãos 1kg</h3>
+        <p class="preco">R$ 18,00</p>
+        <a href="#" class="cart-add-button">
+            <span>ADICIONAR AO CARRINHO</span>
+        </a>
+    </div>
+    <div class="produtos">
+        <img src="{{ url_for('static', filename='img/pacote-cafe2.png') }}" alt="Café em grãos 2kg">
+        <h3>Café em Grãos 2kg</h3>
+        <p class="preco">R$ 32,00</p>
+        <a href="#" class="cart-add-button">
+            <span>ADICIONAR AO CARRINHO</span>
+        </a>
+    </div>
+    <div class="produtos">
+        <img src="{{ url_for('static', filename='img/pacote-cafe3.png') }}" alt="Café em grãos 3kg">
+        <h3>Café em Grãos 3kg</h3>
+        <p class="preco">R$ 45,00</p>
+        <a href="#" class="cart-add-button">
+            <span>ADICIONAR AO CARRINHO</span>
+        </a>
+    </div>
+</div>
+
+<!--Rodapé-->
+
+<footer>
+    <div class="footer-content">
+        <div class="plataformas-de-venda">
+            <h4>PLATAFORMAS DE VENDA</h4>
+            <img src="{{ url_for('static', filename='img/shopee-edit.png') }}" alt="Shopee">
+            <img src="{{ url_for('static', filename='img/mercado-livre-edit.png') }}" alt="Mercado Livre"> 
+        </div>
+        <div class="contatos">
+            <h4>CONTATOS</h4>
+            <p><img src="{{ url_for('static', filename='img/telefone.png') }}" alt="Telefone"> (xx) xxxxx-xxxx</p>
+            <p><img src="{{ url_for('static', filename='img/envelope.png') }}" alt="Email" class="e-mail">cafedigital.marilia@gmail.com</p>
+        </div>
+        <div class="redes-sociais">
+            <h4>REDES SOCIAIS</h4>
+            <img src="{{ url_for('static', filename='img/facebook.png') }}" alt="Facebook"> 
+            <img src="{{ url_for('static', filename='img/instagram.png') }}" alt="Instagram">
+            <img src="{{ url_for('static', filename='img/tik-tok.png') }}" alt="tik-tok">
+            <img src="{{ url_for('static', filename='img/youtube.png') }}" alt="youtube">
+        </div>
+    </div>
+    <p>&copy; 2024 Café Digital. Todos os direitos reservados.</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

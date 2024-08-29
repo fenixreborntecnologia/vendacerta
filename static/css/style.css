@@ -1,0 +1,532 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+header {
+    background-color: #FBE6D2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .pesquisa {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+header .pesquisa input {
+    width: 150%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+}
+
+.pesquisa input[type="search"] {
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none; 
+    flex: 1; 
+}
+
+.pesquisa a {
+    display: inline-block;
+    margin-left: 10px; 
+}
+
+.pesquisa a img {
+    width: 24px; 
+    height: 24px; 
+    transition: transform 0.3s; 
+}
+
+.pesquisa a:hover img {
+    transform: scale(1.2); 
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 100;
+}
+
+header .logo img {
+    width: 100px;
+    height: auto;
+}
+
+.carrinho {
+    position: relative;
+    display: inline-block;
+}
+
+.carrinho a {
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.carrinho img {
+    width: 40px;  
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.carrinho img:hover {
+    transform: scale(1.1);
+}
+
+.button {
+    padding: 10px 50px;
+    background-color: #905F3E;
+    color: #FBE6D2;
+    border-radius: 60px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.button span {
+    font-size: 15px;
+    position: relative;
+}
+
+.button::before {
+    content: '';
+    background-color: #512827;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: var(--eixoY);
+    left: var(--eixoX);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+}
+
+.button:hover::before {
+    width: 500px;
+    height: 500px;
+}
+
+
+
+/* BANNER */
+
+.banner{
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    background-image: url('../img/imagem-cafe-coracao.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 4px;
+}
+
+.banner_buttons{
+    padding: 35px 50px;
+    background-color:  #FBE6D2;
+    border-radius: 60px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: 0,5s;
+}
+
+.produtos, .sobre_nos{
+    padding: 35px 50px;
+    color: #905F3E;
+    text-decoration: none;
+    transition: transform 0.3s; 
+}
+
+.produtos{
+    border-right: 2px solid #905F3E;
+}
+
+
+.produtos span, .sobre_nos span {
+    font-size: 15px;
+    position: relative;
+}
+
+.produtos:hover, .sobre_nos:hover{
+    color: #512827;
+    transform: scale(1.2);
+}
+
+/* PRODUTO */
+
+.produto {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 50px;
+    gap: 50px;
+}
+.produto .produtos {
+    border: 1px solid #512827;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 10px;
+    text-align: center;
+}
+.produto .produtos img {
+    width: 100px;
+    height: 150px;
+}
+
+.cart-add-button{
+    padding: 10px 30px;
+    background-color: #905F3E;
+    color: #FBE6D2;
+    border-radius: 60px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.cart-add-button span{
+    font-size: 10px;
+    position: relative;
+}
+
+.cart-add-button:hover{
+    background-color: #512827;
+}
+
+/* Tela de Aceitar Cookies */
+
+.cookies-msg{
+    width: 45%;
+    background-color: #FBE6D2;
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 15px;
+    border: 2px solid #512827;
+    display: none;
+}
+
+.cookies-msg.mostrar{
+    display: block;
+}
+.cookies-msg .cookies-txt{
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    padding: 20px;
+    color: #512827;
+}
+
+.cookies-msg .cookies-btn{
+    margin-left: 30px;
+}
+
+.cookies-msg .cookies-btn button{
+    background-color: #905F3E;
+    color: #FBE6D2;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+    border-radius: 20px;
+}
+
+.cookies-msg .cookies-btn button:hover{
+    transform: scale(0.9);
+    background-color: #512827;
+    color: #FBE6D2;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #FBE6D2; 
+    padding: 20px; 
+    margin-top: 50px; 
+    color: #512827; 
+    text-align: center; 
+    font-size: 14px; 
+}
+
+.footer-content {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: flex-start; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.footer-content div {
+    flex: 1; 
+    padding: 10px; 
+    text-align: center; 
+    min-width: 200px; 
+}
+
+.footer-content h4 {
+    margin-bottom: 15px; 
+    font-size: 16px; 
+}
+
+.footer-content img {
+    display: inline-block; 
+    margin: 5px 10px; 
+    max-width: 50px; 
+    height: auto; 
+}
+
+footer p {
+    margin-top: 20px; 
+    font-size: 12px; 
+    color: #512827; 
+}
+
+.contatos p, .redes-sociais p {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 5px 0; 
+}
+
+.contatos img, .redes-sociais img {
+    margin-right: 10px; 
+    width: 20px; 
+    height: auto; 
+}
+
+.plataformas-de-venda img {
+    max-width: 50px; 
+    height: auto; 
+    margin: 5px 5px; 
+}
+
+.redes-sociais img {
+    margin: 11px 10px; 
+    width: 30px; 
+    height: auto; 
+}
+
+
+
+/* CAFÉ DIGITAL | LOGIN */
+
+.tela-login {
+    background-color: #FBE6D2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 60px; 
+    border-radius: 20px; 
+    color: #905F3E;
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin-top: 60px;
+}
+
+.tela-login h1 {
+    margin-bottom: 20px; 
+}
+
+.login-e-senha {
+    margin-bottom: 20px; 
+}
+
+.login-e-senha input {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-bottom: 10px; 
+    border: 1px solid #512827; 
+    border-radius: 20px; 
+}
+
+.outras-formas-login h3 {
+    margin: 20px 30px; 
+    font-size: 16px; 
+}
+
+.google-e-apple {
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+    margin-bottom: 40px; 
+}
+
+.google-e-apple img {
+    width: 30px; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.google-e-apple a:hover img {
+    transform: scale(1.1); 
+}
+
+
+/* CAFÉ DIGITAL | CADASTRAR */
+
+.tela-cadastro{
+    background-color: #FBE6D2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px 200px; 
+    border-radius: 20px; 
+    color: #905F3E;
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin-top: 60px;
+}
+
+.tela-cadastro h1{
+    margin-bottom: 20px; 
+}
+
+.formulario-cadastro{
+    margin-bottom: 20px; 
+}
+
+.formulario-cadastro input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px; 
+    border: 1px solid #512827; 
+    border-radius: 20px; 
+}
+
+/* Área-Logada */
+
+.usuario{
+    display: inline-block; 
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Versão mobile */
+
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header .pesquisa {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    header .pesquisa input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 15px;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    header .logo img {
+        width: 70px;
+    }
+
+    .carrinho {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .carrinho a {
+        margin: 0 10px;
+    }
+
+    .button {
+        padding: 8px 30px;
+        font-size: 14px;
+    }
+
+    /* Ajustes no banner */
+
+    .banner {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .banner_buttons {
+        padding: 15px 30px;
+        border-radius: 30px;
+    }
+
+    .produtos, .sobre_nos {
+        padding: 15px 30px;
+        font-size: 14px;
+    }
+
+    .produtos {
+        border-right: none;
+        border-bottom: 2px solid #905F3E;
+        margin-bottom: 10px;
+    }
+
+    .banner_buttons {
+        text-align: center;
+    }
+}
+
+.produto .produtos .preco {
+    color: #4CAF50;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+footer {
+    background-color: #f5e6da;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+footer .footer-content div {
+    flex: 1;
+}
