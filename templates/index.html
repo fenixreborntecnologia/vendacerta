@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename= 'img/logo1.jpg') }}">
-    <link rel="icon" href="{{ url_for('static', filename= 'img/logo_edit.png') }}">
     <title>Café Digital</title>
 </head>
 <body>
@@ -18,7 +17,7 @@
     </div>
 
     <div class="carrinho">
-        <a href="https://www.cafedigital.store">
+        <a href="https://cafedigital.mercadoshops.com.br">
             <img src="{{ url_for('static', filename='img/carrinho-de-compras.png') }}">
         </a>
     </div>
@@ -28,11 +27,10 @@
 
 <div class="banner">
     <div class="banner_buttons">
-        <a href="#" class="produtos">
+        <a href="#" id="produtosBtn" class="botaoproduto">
             <span>PRODUTOS</span>
         </a>
-    
-        <a href="#" class="sobre_nos">
+        <a href="#" id="sobreNosBtn" class="sobre_nosbotao">
             <span>SOBRE NÓS</span>
         </a>
     </div>
@@ -40,12 +38,12 @@
 
 <!--Tela de vendas dos produtos-->
 
-<div class="produto">
-    <div class="produtos">
+<div id="produto">
+    <!-- <div class="produtos">
         <img src="{{ url_for('static', filename='img/pacote-cafe.png') }}" alt="Café em grãos 1kg">
         <h3>Café em Grãos Bronze</h3>
         <p class="preco">R$ 18,00</p>
-        <a href="https://www.cafedigital.store" class="cart-add-button">
+        <a href="https://cafedigital.mercadoshops.com.br" class="cart-add-button">
             <span>ADICIONAR AO CARRINHO</span>
         </a>
     </div>
@@ -53,18 +51,27 @@
         <img src="{{ url_for('static', filename='img/pacote-cafe2.png') }}" alt="Café em grãos 2kg">
         <h3>Café em Grãos Prata</h3>
         <p class="preco">R$ 32,00</p>
-        <a href="https://www.cafedigital.store" class="cart-add-button">
+        <a href="https://cafedigital.mercadoshops.com.br" class="cart-add-button">
             <span>ADICIONAR AO CARRINHO</span>
         </a>
-    </div>
+    </div> -->
     <div class="produtos">
         <img src="{{ url_for('static', filename='img/pacote-cafe3.png') }}" alt="Café em grãos 3kg">
-        <h3>Café em Grãos Ouro</h3>
-        <p class="preco">R$ 45,00</p>
-        <a href="https://www.cafedigital.store" class="cart-add-button">
+        <h3>Café em Pó Linha Ouro 250g</h3>
+        <p class="preco">R$ ?,??</p>
+        <a href="https://cafedigital.mercadoshops.com.br" class="cart-add-button">
             <span>ADICIONAR AO CARRINHO</span>
         </a>
     </div>
+</div>
+
+<div id="sobreNos" class="section">
+    <div class="sobreNos-text">
+        <h2>Sobre Nós</h2>
+        <p>O Café Digital nasceu em 2024, unindo uma cultura de tecnologia com a cultura do sítio, onde o café é colhido. </p>
+        <p> Nossa empresa tem como objetivo entregar um café bem feito no conforto da sua casa. Nosso café passa por uma colheita cuidadosa, onde cada grão é monitorado, garantindo mais segurança e confiança no sabor. Sabemos que estamos proporcionando a você um excelente café. </p>  
+        <p>Digitalmente, estamos aqui com atualizações no site todas as semanas e também compartilhando novidades do mercado. Nosso objetivo é aproximar nosso café de você, seja de forma presencial ou digital, garantindo qualidade tanto em sabor quanto no preço.</p>    
+    </div> 
 </div>
 
 <!-- Tela de Aceitar Cookies -->
@@ -79,25 +86,31 @@
     </div>
 </div>
 
+<!-- Ícone do WhatsApp -->
+
+<a href="https://wa.me/5514999999999" class="whatsapp-icon" target="_blank">
+    <img src="{{ url_for('static', filename='img/whatsapp-logo.png') }}" alt="WhatsApp">
+ </a>
+
 <!--Rodapé-->
 
 <footer>
     <div class="footer-content">
         <div class="plataformas-de-venda">
             <h4>PLATAFORMA DE VENDA</h4>
-            <img src="{{ url_for('static', filename='img/mercado-livre-edit.png') }}" alt="Mercado Livre"> 
+            <a href="https://cafedigital.mercadoshops.com.br"><img src="{{ url_for('static', filename='img/mercado-livre-edit.png') }}" alt="Mercado Livre"></a> 
         </div>
         <div class="contatos">
             <h4>CONTATOS</h4>
-            <!-- <p><img src="{{ url_for('static', filename='img/telefone.png') }}" alt="Telefone"> (xx) xxxxx-xxxx</p> -->
+            <p><img src="{{ url_for('static', filename='img/telefone.png') }}" alt="Telefone"> (xx) xxxxx-xxxx</p>
             <p><img src="{{ url_for('static', filename='img/envelope.png') }}" alt="Email" class="e-mail">cafedigital.marilia@gmail.com</p>
         </div>
         <div class="redes-sociais">
             <h4>REDES SOCIAIS</h4>
-            <img src="{{ url_for('static', filename='img/facebook.png') }}" alt="Facebook"> 
-            <img src="{{ url_for('static', filename='img/instagram.png') }}" alt="Instagram">
-            <img src="{{ url_for('static', filename='img/tik-tok.png') }}" alt="tik-tok">
-            <img src="{{ url_for('static', filename='img/youtube.png') }}" alt="youtube">
+            <a href="#"><img src="{{ url_for('static', filename='img/facebook.png') }}" alt="Facebook"></a> 
+            <a href="https://www.instagram.com/cafe.digital_ofc?igsh=MWxzZGpjazNsY2I0ag=="><img src="{{ url_for('static', filename='img/instagram.png') }}" alt="Instagram"></a>
+            <a href="https://vm.tiktok.com/ZMrshwvgt/"><img src="{{ url_for('static', filename='img/tik-tok.png') }}" alt="tik-tok"></a>
+            <a href="https://youtube.com/@cafedigital-f1q?si=LqwZymnDDYsxM3s7"><img src="{{ url_for('static', filename='img/youtube.png') }}" alt="youtube"></a>
         </div>
     </div>
     <p>&copy; 2024 Café Digital. Todos os direitos reservados.</p>
