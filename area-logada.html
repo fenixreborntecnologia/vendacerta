@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo1.jpg">
+    <title>Café Digital</title>
+</head>
+<body>
+
+<!--Cabeçalho-->
+
+<header>
+    <div class="pesquisa">
+        <input type="search" placeholder="Buscar">
+        <a href="#">
+            <img src="img/procurar.png">
+        </a>
+    </div>
+
+    <div class="logo">
+        <img src="img/logo-edit.png" alt="Logo">
+    </div>
+
+    <div class="carrinho">
+        <a href="#" id="cartButton" onclick="openModal()">
+            <img src="img/carrinho-de-compras.png">
+        </a>
+        
+        <div class="usuario">
+            <a href="#">
+                <img src="img/retrato.png">
+            </a>
+        </div>
+        
+    </div>
+</header>
+
+
+<!--Banner e botão "Sobre Nós/Produtos"-->
+
+<div class="banner">
+    <div class="banner_buttons">
+        <a href="#" id="produtosBtn" class="produtos">
+            <span>PRODUTOS</span>
+        </a>
+        <a href="#" id="sobreNosBtn" class="sobre_nos">
+            <span>SOBRE NÓS</span>
+        </a>
+    </div>
+</div>
+
+<!--Tela de vendas dos produtos-->
+
+<div id="produto">
+        
+    <div class="produtos">
+        <img src="img/pacote-cafe.png" alt="Café em grãos 1kg">
+        <h3>Café em Grãos 1kg</h3>
+        <p class="preco">R$ 18,00</p>
+        <button class="cart-add-button" onclick="addToCart('Café em Grãos 1kg', 18.00, 'img/pacote-cafe.png')">
+            <span>ADICIONAR AO CARRINHO</span>
+        </button>
+    </div>
+    <div class="produtos">
+        <img src="img/pacote-cafe2.png" alt="Café em grãos 2kg">
+        <h3>Café em Grãos 2kg</h3>
+        <p class="preco">R$ 32,00</p>
+        <button href="#" class="cart-add-button" onclick="addToCart('Café em Grãos 2kg', 32.00, 'img/pacote-cafe2.png')">
+            <span>ADICIONAR AO CARRINHO</span>
+        </button>
+    </div>
+    <div class="produtos">
+        <img src="img/pacote-cafe3.png" alt="Café em grãos 3kg">
+        <h3>Café em Grãos 3kg</h3>
+        <p class="preco">R$ 45,00</p>
+        <button href="#" class="cart-add-button" onclick="addToCart('Café em Grãos 3kg', 45.00, 'img/pacote-cafe3.png')">
+            <span>ADICIONAR AO CARRINHO</span>
+        </button>
+    </div>
+</div>
+
+<div id="sobreNos" class="section">
+    <div class="sobreNos-text">
+        <h2>Sobre Nós</h2>
+        <p>O Café Digital nasceu em 2024, unindo uma cultura de tecnologia com a cultura do sítio, onde o café é colhido. </p>
+        <p> Nossa empresa tem como objetivo entregar um café bem feito no conforto da sua casa. Nosso café passa por uma colheita cuidadosa, onde cada grão é monitorado, garantindo mais segurança e confiança no sabor. Sabemos que estamos proporcionando a você um excelente café. </p>  
+        <p>Digitalmente, estamos aqui com atualizações no site todas as semanas e também compartilhando novidades do mercado. Nosso objetivo é aproximar nosso café de você, seja de forma presencial ou digital, garantindo qualidade tanto em sabor quanto no preço.</p>    
+    </div> 
+</div>
+
+
+<!--Modal do Carrinho-->
+
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Meu Carrinho</h2>
+        <ul id="cartItems"></ul>
+        <p id="totalPrice">Total: R$0,00</p>
+        <button id="checkoutButton" onclick="goToPayment()">Finalizar Compra</button>
+    </div>
+</div>
+
+<!-- Modal de Pagamento -->
+
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closePaymentModal()">&times;</span>
+        <h2>Tela de Pagamento</h2>
+
+        <div class="payment-summary">
+            <h3>Resumo do Pedido</h3>
+            <ul id="orderSummary"></ul>
+            <p id="paymentTotalPrice">Total: R$0,00</p>
+        </div>
+
+        <div class="payment-options">
+            <h3>Escolha a forma de pagamento:</h3>
+            <form id="paymentForm">
+                <div>
+                    <input type="radio" id="credito" name="paymentMethod" value="credito" checked>
+                    <label for="credito">Cartão de Crédito</label>
+                </div>
+                <div>
+                    <input type="radio" id="debito" name="paymentMethod" value="debito">
+                    <label for="debito">Cartão de Débito</label>
+                </div>
+                <div>
+                    <input type="radio" id="pix" name="paymentMethod" value="pix">
+                    <label for="pix">Pix</label>
+                </div>
+                <div>
+                    <input type="radio" id="boleto" name="paymentMethod" value="boleto">
+                    <label for="boleto">Boleto Bancário</label>
+                </div>
+
+                <button type="submit" class="finalizacao-button">Finalizar Pagamento</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Tela de Aceitar Cookies -->
+
+<div class="cookies-msg" id="cookies-msg">
+    <div class="cookies-txt">
+        <p>Este site usa cookies para melhorar a sua experiência.</p>
+
+        <div class="cookies-btn">
+            <button onclick="aceito()">Aceito</button>
+        </div>
+    </div>
+</div>
+
+<!-- Ícone do WhatsApp -->
+
+<a href="https://wa.me/5514999999999" class="whatsapp-icon" target="_blank">
+    <img src="img/whatsapp-logo.png" alt="WhatsApp">
+ </a>
+
+
+<!--Rodapé-->
+
+<footer>
+    <div class="footer-content">
+        <div class="plataformas-de-venda">
+            <h4>PLATAFORMAS DE VENDA</h4>
+            <img src="img/shopee-edit.png" alt="Shopee">
+            <img src="img/mercado-livre-edit.png" alt="Mercado Livre"> 
+        </div>
+        <div class="contatos">
+            <h4>CONTATOS</h4>
+            <p><img src="img/telefone.png" alt="Telefone"> (xx) xxxxx-xxxx</p>
+            <p><img src="img/envelope.png" alt="Email" class="e-mail">cafedigital.marilia@gmail.com</p>
+        </div>
+        <div class="redes-sociais">
+            <h4>REDES SOCIAIS</h4>
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a> 
+            <a href="https://www.instagram.com/cafe.digital_ofc?igsh=MWxzZGpjazNsY2I0ag=="><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="https://vm.tiktok.com/ZMrshwvgt/"><img src="img/tik-tok.png" alt="tik-tok"></a>
+            <a href="https://youtube.com/@cafedigital-f1q?si=LqwZymnDDYsxM3s7"><img src="img/youtube.png" alt="youtube"></a>
+        </div>
+    </div>
+    <p>&copy; 2024 Café Digital. Todos os direitos reservados.</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
