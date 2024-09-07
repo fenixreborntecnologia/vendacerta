@@ -7,7 +7,7 @@ body {
 /* HEADER */
 
 header {
-    background-color: #FBE6D2;
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +64,7 @@ header .logo {
 }
 
 header .logo img {
-    width: 100px;
+    width: 150px;
     height: auto;
 }
 
@@ -132,7 +132,7 @@ header .logo img {
     height: 50vh;
     width: 100%;
     display: flex;
-    background-image: url('../img/imagem-cafe-coracao.png');
+    background-image: url('../img/loja-celular.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     gap: 4px;
@@ -140,7 +140,7 @@ header .logo img {
 
 .banner_buttons{
     padding: 25px 50px;
-    background-color:  #FBE6D2;
+    background-color:  #000;
     border-radius: 60px;
     text-decoration: none;
     position: relative;
@@ -151,13 +151,13 @@ header .logo img {
 
 .botaoproduto, .sobre_nosbotao{
     padding: 35px 50px;
-    color: #905F3E;
+    color: #F5FF70;
     text-decoration: none;
     transition: transform 0.3s; 
 }
 
 .botaoproduto{
-    border-right: 2px solid #905F3E;
+    border-right: 2px solid #F5FF70;
 }
 
 
@@ -167,7 +167,7 @@ header .logo img {
 }
 
 .botaoproduto:hover, .sobre_nosbotao:hover{
-    color: #512827;
+    color: #2158A8;
     transform: scale(1.2);
 }
 
@@ -188,7 +188,7 @@ header .logo img {
     gap: 50px;
 }
 #produto .produtos {
-    border: 1px solid #512827;
+    border: 1px solid #000;
     border-radius: 5px;
     padding: 10px;
     margin: 0 10px;
@@ -209,8 +209,8 @@ header .logo img {
 
 .cart-add-button{
     padding: 10px 30px;
-    background-color: #905F3E;
-    color: #FBE6D2;
+    background-color: #000;
+    color: #F5FF70;
     border-radius: 60px;
     text-decoration: none;
     position: relative;
@@ -227,7 +227,7 @@ header .logo img {
 }
 
 .cart-add-button:hover{
-    background-color: #512827;
+    background-color: #2158A8;
     transform: scale(1.05);
 }
 
@@ -239,7 +239,7 @@ header .logo img {
     background-size: cover;
     background-position: center;
     gap: 4px;
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     padding: 40px 20px; 
     box-sizing: border-box; 
@@ -269,13 +269,13 @@ header .logo img {
 
 .cookies-msg{
     width: 45%;
-    background-color: #FBE6D2;
+    background-color: #000;
     position: fixed;
     bottom: 5%;
     left: 50%;
     transform: translate(-50%);
     border-radius: 15px;
-    border: 2px solid #512827;
+    border: 2px solid #F5FF70;
     display: none;
 }
 
@@ -287,7 +287,7 @@ header .logo img {
     align-items: center;
     text-align: justify;
     padding: 20px;
-    color: #512827;
+    color: #F5FF70;
 }
 
 .cookies-msg .cookies-btn{
@@ -295,8 +295,8 @@ header .logo img {
 }
 
 .cookies-msg .cookies-btn button{
-    background-color: #905F3E;
-    color: #FBE6D2;
+    background-color: #000;
+    color: #F5FF70;
     font-weight: 700;
     font-size: 18px;
     padding: 10px 40px;
@@ -308,45 +308,17 @@ header .logo img {
 
 .cookies-msg .cookies-btn button:hover{
     transform: scale(0.9);
-    background-color: #512827;
-    color: #FBE6D2;
+    background-color: #2158A8;
 }
-
-/* ICONE DO WHATSAPP */
-
-.whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    z-index: 1000;
-    background-color: #905F3E;
-    border-radius: 30px;
-}
-
-.whatsapp-icon img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    align-items: center;
-    transition: transform 0.3s;
-}
-
-.whatsapp-icon img:hover {
-    transform: scale(1.1);
-    background-color: #512827;
-}
-
 
 
 /* RODAPÉ */
 
 footer {
-    background-color: #FBE6D2; 
+    background-color: #000; 
     padding: 20px; 
     margin-top: 50px; 
-    color: #512827; 
+    color: #F5FF70; 
     text-align: center; 
     font-size: 14px; 
 }
@@ -383,7 +355,7 @@ footer {
 footer p {
     margin-top: 20px; 
     font-size: 12px; 
-    color: #512827; 
+    color: #F5FF70; 
 }
 
 .contatos p, .redes-sociais p {
