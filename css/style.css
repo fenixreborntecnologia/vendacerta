@@ -712,7 +712,7 @@ footer p {
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        background-color: #FBE6D2;
+        background-color: #000000;
         border-bottom: 1px solid #ddd;
     }
 
@@ -747,35 +747,13 @@ footer p {
         width: 150px;
     }
 
-    .carrinho {
-        flex-grow: 1;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    .carrinho a {
-        margin-left: 15px;
-        flex-shrink: 0; /* Prevents shrinking */
-    }
-
-    .carrinho a.button {
-        background-color: #905F3E;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 20px;
-        text-decoration: none;
-        font-size: 16px;
-        flex-shrink: 0; /* Prevents shrinking */
-    }
-
     .banner{
         align-items: center;
         justify-content: center;
         height: 38vh;
         width: 100%;
         display: flex;
-        background-image: url('../img/imagem-cafe-coracao.png');
+        background-image: url('../img/loja-celular.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         gap: 4px;
@@ -783,7 +761,7 @@ footer p {
     
     .banner_buttons{
         padding: 25px 50px;
-        background-color:  #FBE6D2;
+        background-color:  #000000;
         border-radius: 70px;
         text-decoration: none;
         position: relative;
@@ -792,15 +770,14 @@ footer p {
         transition: 0,5s;
     }
     
-    .botaoproduto, .sobre_nosbotao{
-        padding: 35px 50px;
-        color: #905F3E;
-        text-decoration: none;
-        transition: transform 0.3s; 
+    .botaoproduto, .sobre_nosbotao {
+        padding: 20px 30px; /* Reduz o padding para evitar a quebra */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+        white-space: nowrap; /* Impede a quebra do texto em duas linhas */
     }
     
     .botaoproduto{
-        border-right: 2px solid #905F3E;
+        border-right: 2px solid #F5FF70;
     }
     
     
@@ -810,35 +787,37 @@ footer p {
     }
     
     .botaoproduto:hover, .sobre_nosbotao:hover{
-        color: #512827;
+        color: #0059ff;
         transform: scale(1.2);
     }
-
-    #sobreNos{
+    #sobreNos {
         background-image: url(../img/sobre-nos.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        gap: 4px;
-        height: 40vh;
+        height: 50vh; /* Mantém a altura da seção */
         width: 100%;
-        padding: 40px 20px; 
-        box-sizing: border-box; 
-    }
-
-    .sobreNos-text{
-        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    } 
+    
+    
+    .sobreNos-text {
+        background-color: rgba(255, 255, 255, 0.9); /* Mantém a opacidade */
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        max-width: 800px;
+        max-width: 700px; /* Reduz a largura máxima */
+        width: 80%; /* Define a largura em 80% da área disponível */
         text-align: justify;
         margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 60px;
+        max-height: 80%; /* Limita a altura a 80% do container */
+        overflow-y: auto; /* Permite rolagem caso o texto exceda a altura */
     }
+    
 
     #produto {
         display: flex;
@@ -866,12 +845,12 @@ footer p {
 
     .produtos .preco {
         font-size: 16px;
-        color: #5E4127;
+        color: #000000;
         margin-bottom: 10px;
     }
 
     .produtos a.cart-add-button {
-        background-color: #5E4127;
+        background-color: #000000;
         color: white;
         padding: 10px;
         border-radius: 20px;

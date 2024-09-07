@@ -1,0 +1,192 @@
+:root {
+    --primaria: #fff500;
+    --secundaria: #1A6AE2;
+    --texto: #2f2f2f;
+    --laranja: #ff7200;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Cabeçalho */
+  #cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(45deg, #3D008B, #1A6AE2);
+    z-index: 1000;
+  }
+  
+  #nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  #topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  #menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #menu ul li {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  #menu a {
+    color: #fff500;
+    font-weight: 500;
+  }
+  
+  #botao-menu-mobile {
+    display: none;
+  }
+  
+  .btn-secundario {
+    background-color: var(--primaria);
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    color: var(--texto);
+  }
+  
+  .btn-secundario:hover {
+    background-color: var(--laranja);
+    color: var(--primaria);
+    cursor: pointer;
+  }
+
+    /* Conteúdo e formulário de contato */
+    .container-contato {
+      background: rgb(26,106,226);
+      background: linear-gradient(313deg, rgba(26,106,226,1) 0%, rgba(61,0,139,1) 100%);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 280px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999; /* Z-index menor que o cabeçalho */
+      color: #ffffff;
+      width: 700px;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    label {
+      margin-bottom: 8px;
+    }
+    
+    input,
+    textarea {
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    button {
+      background-color: var(--primaria);
+      padding: 5px 15px 5px 15px;
+      border-radius: 5px;
+      color: var(--texto);
+      border: none;
+    }
+    
+    button:hover {
+      background-color: var(--laranja);
+      color: var(--primaria);
+      cursor: pointer;
+    }
+    
+  
+  /* Rodapé */
+  #rodape {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 30px;
+    background-color: #1A6AE2;
+    z-index: 1000;
+  }
+  
+  #linha-rodape {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .coluna-rodape {
+    width: 25%;
+    color: #ffffff;
+  }
+  
+  .coluna-rodape h2 {
+    color: #fff500;
+  }
+  
+  .coluna-rodape a {
+    color: white;
+    margin-top: 5px;
+  }
+  
+  .coluna-rodape ul {
+    list-style: none;
+  }
+  
+  .coluna-rodape i {
+    color: var(--primaria);
+  }
+  
+  .rede-social {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .rede-social a {
+    background-color: black;
+    font-size: 24px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .copyright {
+    background-color: #ccc;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 30px;
+  }
+  

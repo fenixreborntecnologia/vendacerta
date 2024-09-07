@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/login.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registrar-container {
+    background: rgb(26,106,226);
+    background: linear-gradient(313deg, rgba(26,106,226,1) 0%, rgba(61,0,139,1) 100%);
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    
+}
+
+.logo-tela-registrar{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.registrar-container h2 {
+    margin-bottom: 20px;
+}
+
+.registrar-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#formRegistro label{
+    color: #f2f2f2;
+}
+
+#formRegistro input{
+    border-radius: 30px;
+    border: none;
+}
+
+.registrar-container button {
+    width: 100%;
+    background-color: #fff500;
+    padding: 10px;
+    border-radius: 5px;
+    color: #2f2f2f;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+} 
+
+.registrar-container button:hover {
+    background-color: #ff7200;
+    color: #fff500;
+    cursor: pointer;
+}
+

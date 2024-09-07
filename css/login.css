@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/login.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: rgb(26,106,226);
+    background: linear-gradient(313deg, rgba(26,106,226,1) 0%, rgba(61,0,139,1) 100%);
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    
+}
+
+.logo-tela-login{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#formLogin input{
+    border-radius: 30px;
+    border: none;
+}
+
+.login-container button {
+    width: 100%;
+    background-color: #fff500;
+    padding: 10px;
+    border-radius: 5px;
+    color: #2f2f2f;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+} 
+
+.login-container button:hover {
+    background-color: #ff7200;
+    color: #fff500;
+    cursor: pointer;
+}
+
+.logar-com h3{
+    text-align: center;
+    color: #f2f2f2;
+}
+
+#botao-facebook{
+    background-color: #0866FF;
+    font-size: 1.2rem;
+    height: 60px;
+    border: none;
+    width: 100%;
+    border-radius: 40px;
+    color: white;
+    margin-top: 5px;
+}
+
+#botao-facebook:hover{
+    background-color: #f2f2f2;
+    color: #2f2f2f;
+    cursor: pointer;
+}
+
+#botao-google{
+    background-color: #e94235;
+    font-size: 1.2rem;
+    height: 60px;
+    border: none;
+    width: 100%;
+    border-radius: 40px;
+    color: white;
+    margin-top: 15px;
+}
+
+#botao-google:hover{
+    background-color: #f2f2f2;
+    color: #2f2f2f;
+    cursor: pointer;
+}
